@@ -1,5 +1,7 @@
-# Advent of Code 2022
+# Advent of Code
 
-My solutions for the Advent of Code 2022 - Exercices solved in Python
+This repository contains my solutions for the Advent of code.
+- [2022](2022/)
+- [2023](2023/)
 
-Website : https://adventofcode.com/
+Website for puzzles [here](https://adventofcode.com/)
