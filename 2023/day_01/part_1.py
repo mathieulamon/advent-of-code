@@ -13,7 +13,13 @@ def read_input():
 
 
 def solve_part_1(data):
-    print("TODO")
+    overall_sum = 0
+
+    for line in data:
+        digits = list(filter(str.isdigit, line))
+        overall_sum += int(digits[0] + digits[len(digits) - 1])
+
+    return overall_sum
 
 
 if __name__ == '__main__':

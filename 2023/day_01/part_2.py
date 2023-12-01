@@ -13,7 +13,27 @@ def read_input():
 
 
 def solve_part_2(data):
-    print("TODO")
+    word_to_digits = {
+        'one': 'o1e',
+        'two': 't2o',
+        'three': 't3e',
+        'four': 'f4r',
+        'five': 'f5e',
+        'six': 's6x',
+        'seven': 's7n',
+        'eight': 'e8h',
+        'nine': 'n9e'
+    }
+    overall_sum = 0
+
+    for line in data:
+        for key, value in word_to_digits.items():
+            line = line.replace(key, key + value)
+
+        digits = list(filter(str.isdigit, line))
+        overall_sum += int(digits[0] + digits[len(digits) - 1])
+
+    return overall_sum
 
 
 if __name__ == '__main__':
