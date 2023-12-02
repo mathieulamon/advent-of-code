@@ -13,7 +13,25 @@ def read_input():
 
 
 def solve_part_2(data):
-    print("TODO")
+    result = 0
+
+    for line in data:
+        min_red = 0
+        min_green = 0
+        min_blue = 0
+        set_cubes = line.split(': ')[1].split('; ')
+        for cubes in set_cubes:
+            for cube in cubes.split(', '):
+                digits = int(''.join(list(filter(str.isdigit, cube))))
+                if 'red' in cube:
+                    min_red = max(min_red, digits)
+                elif 'green' in cube:
+                    min_green = max(min_green, digits)
+                elif 'blue' in cube:
+                    min_blue = max(min_blue, digits)
+        result += (min_red * min_green * min_blue)
+
+    return result
 
 
 if __name__ == '__main__':
